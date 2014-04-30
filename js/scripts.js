@@ -1,11 +1,15 @@
 $(document).ready(function() {
-    // $('.single-item').slick({
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 300,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    // });
+    for(var i = 0; i < videos.length; i++) {
+        var video = videos[i];
+        $('#videos').append('<div><div class="YTvideos"><iframe src="' + video.src + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>');
+    }
+    $('.single-item').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
     $('.multiple-items').slick({
         dots: true,
         infinite: true,
