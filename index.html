@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
 	<title>slick - the last carousel you'll ever need</title>
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/monokai.min.css">
@@ -35,8 +34,26 @@
 
 	  ga('create', 'UA-4390117-9', 'kenwheeler.github.io');
 	  ga('send', 'pageview');
-
 	</script>
+
+	<script language="javascript"> 
+		window.videos = [
+			{src:"http://www.youtube.com/embed/moSFlvxnbgk"},
+			{src:"http://www.youtube.com/embed/1ggPgTNvw_k"},
+			{src:"http://player.vimeo.com/video/92512296"},
+			{src:"http://player.vimeo.com/video/92224516?badge=0"},
+			{src:"https://vine.co/v/MilH1uzQlUK/embed/simple"},
+			{src:"https://vine.co/v/bjHh0zHdgZT/embed/simple"}
+		];
+		// window.videos[0] = '<iframe src="//www.youtube.com/embed/moSFlvxnbgk" frameborder="100" allowfullscreen></iframe>';
+		// window.videos[1] = '<iframe src="//www.youtube.com/embed/1ggPgTNvw_k" frameborder="0" allowfullscreen></iframe>';
+		// window.videos[2] = '<iframe src="//player.vimeo.com/video/92512296" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+		// window.videos[3] = '<iframe src="//player.vimeo.com/video/92224516?badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+		// window.videos[4] = '<iframe class="vine-embed" src="https://vine.co/v/MilH1uzQlUK/embed/simple" frameborder="0"></iframe>';
+		// window.videos[5] = '<iframe class="vine-embed" src="https://vine.co/v/bjHh0zHdgZT/embed/simple" frameborder="0"></iframe>';
+		
+	</script>
+
 </head>
 <body>
 
@@ -82,14 +99,9 @@
 				</ul>
 				<hr id="demos"/>
 				<h2>Single Item</h2>
-				<div class="slider single-item">
-					<div><h3>1</h3></div>
-					<div><h3>2</h3></div>
-					<div><h3>3</h3></div>
-					<div><h3>4</h3></div>
-					<div><h3>5</h3></div>
-					<div><h3>6</h3></div>
-				</div>
+
+				<div id="videos" class="slider single-item"></div>
+
 				<pre><code>
 $('.single-item').slick();
 				</code></pre>
@@ -133,29 +145,29 @@ $('.responsive').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
   responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
+	{
+	  breakpoint: 1024,
+	  settings: {
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		infinite: true,
+		dots: true
+	  }
+	},
+	{
+	  breakpoint: 600,
+	  settings: {
+		slidesToShow: 2,
+		slidesToScroll: 2
+	  }
+	},
+	{
+	  breakpoint: 480,
+	  settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1
+	  }
+	}
   ]
 });
 				</code></pre>
@@ -211,24 +223,24 @@ $('.center').slick({
   centerPadding: '60px',
   slidesToShow: 3,
   responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
+	{
+	  breakpoint: 768,
+	  settings: {
+		arrows: false,
+		centerMode: true,
+		centerPadding: '40px',
+		slidesToShow: 3
+	  }
+	},
+	{
+	  breakpoint: 480,
+	  settings: {
+		arrows: false,
+		centerMode: true,
+		centerPadding: '40px',
+		slidesToShow: 1
+	  }
+	}
   ]
 });
 				</code></pre>
@@ -312,7 +324,7 @@ $('.js-add-slide').on('click', function(){
 $('.js-remove-slide').on('click', function(){
   $('.add-remove').slickRemove(slideIndex - 1);
   if (slideIndex !== 0) {
-  	slideIndex--;
+	slideIndex--;
   }
 });
 				</code></pre>
@@ -345,13 +357,13 @@ var filtered = false;
 
 $('.js-filter').on('click', function(){
   if(filtered === false) {
-    $('.filtering').slickFilter(':even');
-    $(this).text('Unfilter Slides');
-    filtered = true;
+	$('.filtering').slickFilter(':even');
+	$(this).text('Unfilter Slides');
+	filtered = true;
   } else {
-    $('.filtering').slickUnfilter();
-    $(this).text('Filter Slides');
-    filtered = false;
+	$('.filtering').slickUnfilter();
+	$(this).text('Filter Slides');
+	filtered = false;
   }
 });
 				</code></pre>
@@ -499,7 +511,7 @@ $(document).ready(function(){
 						</tr>
 						<tr>
 							<td>onBeforeChange</td>
-					     <td>function</td>
+						 <td>function</td>
 							<td>null</td>
 							<td>Before slide callback</td>
 						</tr>
@@ -660,7 +672,7 @@ $(document).ready(function(){
 				<a class="button last" href="https://github.com/kenwheeler/slick/">View On Github</a>
 				<hr/>
 				<p class="guff">If you like slick, and also like Sass, try my <a href="http://kenwheeler.github.io/guff">Guff</a> mixin library!</p>
- 				<hr/>
+				<hr/>
 				<div id="disqus_thread"></div>
 			</div>
 		</section>
@@ -674,14 +686,20 @@ $(document).ready(function(){
 		<script>hljs.initHighlightingOnLoad();</script>
 
 		<script type="text/javascript">
-        var disqus_shortname = 'slickcarousel';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
+		$(document).ready(function(){
+			for(var i = 0; i < videos.length; i++) {
+				var video = videos[i];
+				$('#videos').append('<div><div class="YTvideos"><iframe src="' + video.src + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>');
+			}
+			$('.single-item').slick({
+				dots: true,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+		});
+	</script>
 
 </body>
 </html>
