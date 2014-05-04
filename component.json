@@ -8,6 +8,7 @@
         "components/jquery": "master"
     },
     "development": {},
+    "main": "slick/slick.js",
     "scripts": [
         "slick/slick.js"
     ],
