@@ -14,5 +14,12 @@
     ],
     "styles": [
         "slick/slick.css"
+    ],
+    "files": [
+        "slick/fonts/slick.eot",
+        "slick/fonts/slick.svg",
+        "slick/fonts/slick.ttf",
+        "slick/fonts/slick.woff",
+        "slick/ajax-loader.gif",
     ]
 }
